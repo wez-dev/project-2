@@ -248,7 +248,7 @@ p a:hover,
         vertical-align: top;/* Align all images uniformally along the top of the row */
         height: 225px;/* Set uniform height so rows are uniform  */        
     }
-    .experience-wrapper figcaption{
+    .experience-wrapper figcaption h3{
         text-align: left;/* Get all text squared to the left, so the absolute position is aligned uniformly */
         position: absolute;
         top: -5%;
