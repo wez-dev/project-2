@@ -1,0 +1,313 @@
+/* -------------------------- */
+/* Root Styles ------------- */
+/* ------------------------ */
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+/* -------------------------- */
+/* Element Base Styles ----- */
+/* ------------------------ */
+body {
+    font-family: 'ZCOOL XiaoWei', serif;
+    background-color: white;
+}
+header {
+    padding-bottom: 25px;
+    background-color: darkslategray;
+}
+footer {
+    width: 100%;
+}
+figure{
+    /* center all figure elements */
+    margin-left: auto;
+    margin-right: auto;
+}
+figure img {
+    border-radius: 5px;
+}
+p {
+    font-family: 'Lato', sans-serif;/* Second font, distinct from heading fonts */
+}
+img {
+    max-width: 100%;
+}
+h1 {
+    color: whitesmoke;
+}
+a {
+    color: whitesmoke;
+    border: 1.5px solid whitesmoke;
+    border-radius: 5px;
+}
+a:hover{
+    color: lightseagreen;
+    border: 1.5px solid lightseagreen;
+}
+p a,
+.contact-wrapper a {
+    color: paleturquoise;
+    text-decoration: none;
+    border: none;
+}
+p a:hover,
+.contact-wrapper a:hover{
+    color: lightseagreen;
+    border: none;
+}
+/* -------------------------- */
+/* Classes Base Styles ----- */
+/* ------------------------ */
+.container-header {
+    width: 60%;
+    margin: 0 auto;
+    /* background-color: lawngreen; */
+}
+.container-header h1 {
+    margin-top: 0;
+    padding-top: 15px;    
+    text-align: center;
+    color: whitesmoke;
+}
+.container-header ul {
+    /* Style the un-ordered list */
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;/* Remove default padding */
+}
+.container-header a:link,
+.container-header a:visited{
+    display: block;/* Makes element clickable - not just the text! */
+    text-decoration: none; /* No underlines  */
+    padding: 10px;/* Make space around the <a>text</a> which is clickable*/
+}
+.container-header li {
+    /* Style the list items */
+    background-color: transparent;
+    margin: 5px;/* Space between list items */
+    /* Don't add padding - creates non-clickable space around the <a></a> */
+}
+.main-body {
+    width: 95%;
+    margin: 0 auto;
+}
+.profile-wrapper {
+    width: 95%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 100px auto 95px auto; /* Center .profile-wrapper and create gutter between header element */
+    border: solid 3px lightseagreen;
+}  
+.profile-wrapper img {
+    max-width: 70%;
+    margin-bottom: 30px; 
+    /*Display smaller than portfolio images */
+}
+.portfolio-wrapper h2,
+.contact-wrapper h2 {
+    padding-bottom: 15px;
+    padding-top: 35px;
+}
+.portfolio-wrapper {
+    text-align: center;/* Center text */
+    background: paleturquoise;
+    border-radius: 5px;    
+    margin: 100px auto 95px auto; /* Center .profile-wrapper and create gutter between header element */
+}
+.portfolio-wrapper img {
+    max-width: 95%; /* image size */
+}
+.portfolio-wrapper figure {
+    padding: 12px 0 12px 0;
+}
+.experience-wrapper {
+    margin: 100px auto 95px auto; /* Center .profile-wrapper and create gutter between header element */
+}
+.experience-wrapper h2 {
+    padding-bottom: 55px; 
+}
+.experience-wrapper{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.experience-wrapper figure:last-of-type{
+    padding-bottom: 25px;/* Create gutter between .experience figure and .contact-wrapper in mobile view */
+}
+.experience-card {
+    padding: 45px 0 45px 0;/* Creat space in stack view */
+}
+.second-body {
+    background-color: darkslategray;
+    padding-top: 20px;
+}
+.contact-wrapper {
+    margin-bottom: 85px;
+    text-align: center;
+}
+.contact-wrapper h2 {
+    color: whitesmoke;
+}
+.contact-wrapper ul{
+    list-style-type: none; 
+    padding-left: 0;
+}
+.footer-rule{
+    /* Add a line above footer.  */
+    border-top: 1px solid black;
+    margin: 0 20px 0 20px; 
+    /* Give same gutter as .footer h2, .footer a:link */
+}
+.footer h2{
+    margin-left: 20px;/* Add gutter to left */
+    padding: 0 0 5px 10px;/* Applying same padding as .footer a:link, so the text lines up */
+    float: left;
+}
+.footer ul{
+    float: right;
+    margin-right: 20px;
+    list-style-type: none;
+}
+.footer li {
+    /* Style the list items */
+    margin: 5px;/* Space between list items */
+    /* Don't add padding - creates non-clickable space around the <a></a> */
+}
+.footer a:link,
+.footer a:visited {
+    display: block;/* Makes element clickable - not just the text! */
+    text-decoration: none;
+    padding: 10px;/* Make space around the <a>text</a> which is clickable*/
+
+}
+.big-screen-menu {
+    display: none;
+}
+/* -------------------------- */
+/* Media Quieries-- 768px--- */
+/* ------------------------ */
+@media (min-width: 768px) {
+
+    /* Style the header and navigation */
+    .container-header {
+        width: 100%;
+    }
+    .container-header ul {
+        /* Style the un-ordered list */
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .container-header li {
+        /* Turn menu li from block/stack into an inline-block which we can center - don't bother floating */
+        display: inline-block;
+        /* Style the list items */
+        margin: 10px;/* Space between list items */
+        /* Don't add padding - creates non-clickable space around the <a></a> */
+    }
+    .container-header a:link,
+    .container-header a:link{
+        padding: 10px 23px 10px 23px;/* Make space around the <a>text</a> which is clickable*/
+    }
+    /* Style the profile section */
+    .profile-wrapper {
+    width: 100%;
+    margin: 40px auto 60px auto;
+    }
+    .profile-wrapper figure {
+        width: 92.5%;
+    }
+    .profile-wrapper img {
+       max-width: 14%;
+       float: right;
+       margin-left: 8%;/* Create gutter between img and p */
+    }
+    /* Style the portfolio and experince cards */
+    .portfolio-wrapper figure {
+        vertical-align: top;/* Align all images uniformally along the top of the row */
+        height: 400px;/* Set uniform height so rows are uniform  */
+    }
+    .experience-wrapper {
+        margin-bottom: 65px;    
+    }    
+    .portfolio-card,
+    .experience-card {
+        display: inline-block;
+        /* Make width & margin big enough to accomodate two cards per row */
+        width: 45%;
+        margin: 2%;/* Keep % so can work out% width of .profile-wrapper figure */
+    }
+    .experience-card {
+        padding: 0;/* Cancel space from stack view */
+    }    
+    .experience-wrapper figure{
+        position: relative;/* Allow figcaption to be positioned absolute relative to the figure element */
+        vertical-align: top;/* Align all images uniformally along the top of the row */
+        height: 225px;/* Set uniform height so rows are uniform  */        
+    }
+    .experience-wrapper figcaption{
+        text-align: left;/* Get all text squared to the left, so the absolute position is aligned uniformly */
+        position: absolute;
+        top: -5%;
+        left: 57.5%;
+    }
+    footer li {
+        display:inline-block;
+    }
+    .little-screen-menu {
+        display: none;
+    }
+    .big-screen-menu {
+        display:inline-block;
+    }    
+}
+/* -------------------------- */
+/* Media Quieries-- 1024px--- */
+/* ------------------------ */
+@media (min-width: 1024px) {
+
+    header{
+        padding-top: 25px;
+        padding-bottom: 55px;
+    }
+    /* Limit width of content containers */
+    .container-header {
+        width: 70%;
+    }
+    .container-header h1{
+        float: left;
+    }
+    nav {
+        float: right;
+    }
+    .main-body {
+        width: 75%;
+    } 
+    .portfolio-card,
+    .experience-card {
+        display: inline-block;
+        width: 30%;/* Reduce width, so cards have enough space for 3 per row */
+        margin: 1%;/* Reduce margin, so cards have enough space for 3 per row */
+    }
+    .profile-wrapper {
+        text-align: left;
+    }
+    .experience-wrapper {
+        margin-bottom: 125px;    
+    }        
+    .footer {
+        width: 75%;
+        margin: 0 auto;/* center footer */
+    }  
+}
+/* -------------------------- */
+/* Clearfix ---------------- */
+/* ------------------------ */
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
